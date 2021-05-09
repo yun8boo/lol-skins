@@ -1,6 +1,8 @@
 import { GetStaticProps } from 'next'
+import styled from 'styled-components';
 import Link from 'next/link'
-import ChanpionListItem from '../components/ChanpionListItem';
+import ChanpionListItem from '../src/components/ChanpionListItem';
+import Layaout from '../src/components/Layout';
 
 interface IndexProps {
   chanpionData: {
@@ -12,17 +14,24 @@ interface IndexProps {
 }
 
 const IndexPage = ({ chanpionData }: IndexProps) => {
-  console.log(chanpionData);
   return (
-    <div>
-      <ul>
-        {
-          Object.keys(chanpionData.data).map(key => {
-            return <li key={key}><ChanpionListItem chanpionInfo={chanpionData.data[key]} /></li>
-          })
-        }
-      </ul>
-    </div>
+    <Layaout>
+      <Container>
+        <Ul>
+          {
+            Object.keys(chanpionData.data).map(key => {
+              return (
+                <li key={key}>
+                  <Link href={`/chanpions/${key}`}>
+                    <a><ChanpionListItem chanpionInfo={chanpionData.data[key]} /></a>
+                  </Link>
+                </li>
+              )
+            })
+          }
+        </Ul>
+      </Container>
+    </Layaout>
   )
 }
 
@@ -38,3 +47,13 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 export default IndexPage
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
+const Ul = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+`

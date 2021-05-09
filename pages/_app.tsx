@@ -1,10 +1,14 @@
 import type { AppProps } from 'next/app'
-// global css
-
+import { GlobalStyle } from '../globalStyle';
 
 // This default export is required in a new `pages/_app.js` file.
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  return <Component {...pageProps} />
+  return (
+    <>
+    <GlobalStyle />
+    <Component {...pageProps} />
+    </>
+  )
 }
 
 export default MyApp
