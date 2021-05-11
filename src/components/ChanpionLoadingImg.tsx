@@ -5,7 +5,7 @@ interface ChanpionLoadingImgProps {
 
 const ChanpionLoadingImg = ({chanpionId, skin}: ChanpionLoadingImgProps) => {
   return (
-    <img height={500} key={skin.id} alt="" src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${chanpionId}_${skin.num}.jpg`}/>
+    <img height={400} key={skin.id} alt="" src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${chanpionId}_${skin.num}.jpg`}/>
   )
 }
 

@@ -8,7 +8,7 @@ const ChanpionListItem = ({chanpionInfo}: ChanpionListItem) => {
   const imagePath = `http://ddragon.leagueoflegends.com/cdn/11.9.1/img/champion/${chanpionInfo.image.full}`;
   return (
     <Container>
-      <img src={imagePath} alt=""/>
+      <Image src={imagePath} alt=""/>
       <p>{chanpionInfo.name}</p>
     </Container>
   )
@@ -21,5 +21,9 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 5px;
-  width: 110px;
+  width: 100px;
+`
+
+const Image = styled.img`
+  
 `

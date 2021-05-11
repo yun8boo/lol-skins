@@ -1,6 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next"
 import styled from "styled-components";
 import ChanpionLoadingImg from "../../src/components/ChanpionLoadingImg";
+import ChanpionSplashImg from "../../src/components/ChanpionSplashImg";
 import Layaout from "../../src/components/Layout";
 
 interface ChanpionPropsType {
@@ -17,6 +18,15 @@ const Chanpion = ({chanpion}: ChanpionPropsType) => {
             return (
               <li key={skin.id}>
                 <ChanpionLoadingImg chanpionId={chanpion.id} skin={skin} />
+              </li>
+            )
+          })}
+        </Ul>
+        <Ul>
+          {chanpion.skins.map((skin: any) => {
+            return (
+              <li key={skin.id}>
+                <ChanpionSplashImg chanpionId={chanpion.id} skin={skin} />
               </li>
             )
           })}
@@ -65,6 +75,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%100px;
 `
 
 const Ul = styled.ul`
