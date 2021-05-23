@@ -43,7 +43,6 @@ const Chanpion = ({chanpion}: ChanpionPropsType) => {
 
 export default Chanpion
 
-
 export const getStaticPaths: GetStaticPaths = async () => {
   const url = 'http://ddragon.leagueoflegends.com/cdn/11.9.1/data/ja_JP/champion.json'
   const res = await fetch(url)
