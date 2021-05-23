@@ -17,10 +17,9 @@ const Seo = ({
   pageImgWidth,
   pageImgHeight
 }: SeoProps) => {
-  console.log("SEO");
   
   const defaultTitle = 'lol-skins'
-  const defaultDescription = 'demo'
+  const defaultDescription = 'lol-skin-list'
 
   const title = pageTitle ? `${pageTitle} | ${defaultTitle}` : defaultTitle
   const description = pageDescription ?? defaultDescription
