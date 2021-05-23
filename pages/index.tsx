@@ -42,7 +42,6 @@ const IndexPage = ({ chanpionData }: IndexProps) => {
 export const getStaticProps: GetStaticProps = async () => {
   const versionResponse = await fetch(`https://ddragon.leagueoflegends.com/api/versions.json`)
   const [newestVersion] = await versionResponse.json();
-  console.log(newestVersion);
   const url = `http://ddragon.leagueoflegends.com/cdn/${newestVersion}/data/ja_JP/champion.json`
   const res = await fetch(url)
   const resJson = await res.json()

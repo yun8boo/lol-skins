@@ -18,7 +18,7 @@ const Chanpion = ({chanpion}: ChanpionPropsType) => {
       />
       <Container>
         <p>{chanpion.name}</p>
-        <Ul>
+        <ChanpionLoadingImgUl>
           {chanpion.skins.map((skin: any) => {
             return (
               <li key={skin.id}>
@@ -26,8 +26,8 @@ const Chanpion = ({chanpion}: ChanpionPropsType) => {
               </li>
             )
           })}
-        </Ul>
-        <Ul>
+        </ChanpionLoadingImgUl>
+        <ChanpionSplashImgUl>
           {chanpion.skins.map((skin: any) => {
             return (
               <li key={skin.id}>
@@ -35,7 +35,7 @@ const Chanpion = ({chanpion}: ChanpionPropsType) => {
               </li>
             )
           })}
-        </Ul>
+        </ChanpionSplashImgUl>
       </Container>
     </Layaout>
   )
@@ -79,10 +79,15 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%100px;
+  width: 100%;
 `
 
-const Ul = styled.ul`
+const ChanpionLoadingImgUl = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+`
+
+const ChanpionSplashImgUl = styled.ul`
   display: flex;
   flex-wrap: wrap;
 `
