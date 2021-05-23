@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ChanpionLoadingImg from "../../src/components/ChanpionLoadingImg";
 import ChanpionSplashImg from "../../src/components/ChanpionSplashImg";
 import Layaout from "../../src/components/Layout";
+import Seo from "../../src/components/Seo";
 
 interface ChanpionPropsType {
   chanpion: any
@@ -11,6 +12,10 @@ interface ChanpionPropsType {
 const Chanpion = ({chanpion}: ChanpionPropsType) => {
   return (
     <Layaout>
+      <Seo
+        pageTitle={chanpion.name}
+        pageImg={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${chanpion.id}_${chanpion.skins[0].num}.jpg`}
+      />
       <Container>
         <p>{chanpion.name}</p>
         <Ul>

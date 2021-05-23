@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link'
 import ChanpionListItem from '../src/components/ChanpionListItem';
 import Layaout from '../src/components/Layout';
+import Seo from '../src/components/Seo';
 
 interface IndexProps {
   chanpionData: {
@@ -16,6 +17,9 @@ interface IndexProps {
 const IndexPage = ({ chanpionData }: IndexProps) => {
   return (
     <Layaout>
+      <Seo
+        pageImg='https://user-images.githubusercontent.com/32152877/117573297-07018580-b112-11eb-80af-d6ed925e5296.png'
+      />
       <Container>
         <Ul>
           {
