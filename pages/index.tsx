@@ -54,10 +54,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 export default IndexPage
 
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-`
+const Container = styled.div``
 
 const Ul = styled.ul`
   display: flex;
