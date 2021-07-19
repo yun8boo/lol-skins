@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import Image from 'next/image'
 
 interface ChanpionLoadingImgProps {
   chanpionId: string
@@ -6,12 +6,8 @@ interface ChanpionLoadingImgProps {
 }
 
 const ChanpionSplashImg = ({chanpionId, skin}: ChanpionLoadingImgProps) => {
-  const [width, setwidth] = useState(0)
-  useEffect(() => {
-    setwidth(window.innerWidth);
-  }, [])
   return (
-    <img width={width} key={skin.id} alt="" src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${chanpionId}_${skin.num}.jpg`}/>
+    <Image layout="fill" key={skin.id} alt="" src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${chanpionId}_${skin.num}.jpg`}/>
   )
 }
 
