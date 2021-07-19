@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styled from 'styled-components';
 
 interface ChanpionListItem {
@@ -8,7 +9,7 @@ const ChanpionListItem = ({chanpionInfo}: ChanpionListItem) => {
   const imagePath = `http://ddragon.leagueoflegends.com/cdn/11.9.1/img/champion/${chanpionInfo.image.full}`;
   return (
     <Container>
-      <Image src={imagePath} alt=""/>
+      <Image src={imagePath} width={100} height={100} loading="lazy" alt=""/>
       <p>{chanpionInfo.name}</p>
     </Container>
   )
@@ -22,8 +23,4 @@ const Container = styled.div`
   align-items: center;
   margin: 5px;
   width: 100px;
-`
-
-const Image = styled.img`
-  
 `

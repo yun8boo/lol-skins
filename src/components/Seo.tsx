@@ -32,6 +32,8 @@ const Seo = ({
     <Head>
       <title>{title}</title>
       <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@yun8boo" />
       <meta name="description" content={description} />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
