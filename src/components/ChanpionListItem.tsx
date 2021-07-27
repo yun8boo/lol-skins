@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-import Blur from '../../public/blur.jpeg'
 
 interface ChanpionListItem {
   chanpionInfo: any
