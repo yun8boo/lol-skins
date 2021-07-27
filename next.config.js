@@ -4,5 +4,6 @@ module.exports = {
   },
   experimental: {
     optimizeFonts: true,
+    optimizeCss: true
   },
 }
